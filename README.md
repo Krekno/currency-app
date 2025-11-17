@@ -1,62 +1,39 @@
-📊 Currency Portfolio Tracker (TRY-Based)
+## 📊 Currency Portfolio Tracker
 
-This project is a desktop application written in Python (Tkinter + SQLite) that allows you to track your foreign currency assets based on Turkish Lira (TRY).
-It fetches live exchange rates from CurrencyLayer API, stores your assets locally, and visualizes historical performance.
+A Python desktop application that tracks your foreign currency assets based on Turkish Lira (TRY).  
+The app fetches live exchange rates, logs daily data, and visualizes portfolio performance.
 
-✨ Features
+### ✨ Features
+- Add and update currency assets
+- Automatically logs daily exchange rates
+- View historical currency data
+- Fetches missing historical rates automatically
+- Calculates profit/loss and percentage change
+- Displays total portfolio value
+- Wealth change graph using matplotlib
+- Local data storage with SQLite
 
-Add & update currency assets
-Track how much of each currency you own and its value in TRY.
+### 🛠️ Technologies Used
+- Python
+- Tkinter (GUI)
+- SQLite
+- Requests
+- Matplotlib
+- CurrencyLayer API
 
-Automatic daily exchange rate logging
-Saves daily live rates into a local SQLite database.
+### 📦 Database Structure
+- `myAssets` — user currency holdings  
+- `log` — daily exchange rates
 
-Historical data viewer
-Fetches missing historical exchange rates and displays change over time with matplotlib.
-
-Portfolio profit/loss calculation
-Calculates:
-
-Total portfolio value
-
-Profit/Loss
-
-Percentage change
-
-Wealth change graph
-Shows the growth of your total wealth over time.
-
-🛠️ Technologies Used
-
-Python
-
-Tkinter (GUI)
-
-SQLite
-
-Requests (API calls)
-
-Matplotlib
-
-CurrencyLayer API
-
-📦 Database
-
-The app automatically creates two tables:
-
-myAssets — your currency holdings
-
-log — historical exchange rates
-
-▶️ How to Run
+### ▶️ How to Run
+```bash
 pip install requests matplotlib
 python app.py
+```
+### 🔑 API Key
 
-🔑 API Key Required
-
-You must replace:
-
+Replace the placeholder:
+```
 api_key = "API_KEY"
-
-
+```
 with your own CurrencyLayer API key.
